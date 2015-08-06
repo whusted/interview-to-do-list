@@ -16,12 +16,13 @@ Geneva.TestView = Marionette.LayoutView.extend({
   initialize: function(options) {
     console.log("Hi there! I'm the initialize. No html has been rendered yet")
   },
-  onRender: function(){
+  onRender: function() {
     console.log("Hi there! I'm the render. All the html has been rendered")
   },
   templateHelpers: function() {
     return {
-      tempVariable: "This is how you pass variables to the template"
+      tempVariable1: "This is how you pass variables to the template",
+      tempVariable2: "Another variable passing test"
     };
   }
 });
