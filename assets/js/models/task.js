@@ -1,9 +1,14 @@
 // Task model
 
-var task = Backbone.Model.extend({
+var Task = Backbone.Model.extend({
   defaults: {
     title: null,
-    isActive: true,
+    completed: false,
     date: null // Implement last
+  },
+
+  initialize: function() {
+    // Set date on initialization
   }
+
 });
