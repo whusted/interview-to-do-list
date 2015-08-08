@@ -7,8 +7,13 @@ var Task = Backbone.Model.extend({
     date: null
   },
 
+  toggle: function() {
+    // Checks completed field's value, toggles it
+    // Save structure: model.save([attributes], [options])
+    this.save({completed: !this.get("completed")});
+  },
+
   initialize: function() {
-    // Set date on initialization
     this.set('date', Date());
   }
 

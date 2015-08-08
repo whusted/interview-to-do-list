@@ -1,18 +1,19 @@
 var Geneva = new Marionette.Application();
 
 Geneva.addRegions({
-  mainRegion: "#main-region"
+  mainRegion: "#main-region",
+  listRegion:'#list-view'
 });
 
 Geneva.on("start", function() {
   Backbone.history.start();
-
-  Geneva.mainRegion.show(new Geneva.TestView())
+  //var appView = new AppView();
+  //Geneva.mainRegion.show(new Geneva.TestView())
 });
 
 
 Geneva.TestView = Marionette.LayoutView.extend({
-  template: "#test-view",
+  template: "#task-template",
   initialize: function(options) {
     console.log("Hi there! I'm the initialize. No html has been rendered yet")
   },

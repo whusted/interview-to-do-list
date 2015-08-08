@@ -1,6 +1,8 @@
 // Our only collection: a number of tasks
 
-var Tasks = Backbone.Collection.extend({
+var TasksList = Backbone.Collection.extend({
   model: Task,
   localStorage: new Store("backbone-todo")
 });
+
+var TasksList = new TasksList();
