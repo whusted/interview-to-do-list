@@ -9,15 +9,15 @@
   </head>
 
   <body>
-    <div id="task-app">
+    <div id="task-app" class="container">
       <h1>Get Stuff Done</h1>
       <input id="new-task" placeholder="What needs to be done?">
       <section id="main">
-        <ul id="task-list"></ul>
+        <ul id="task-list" class="list-group"></ul>
       </section>
     </div>
 
-
+    <!-- Load all js scripts more elegantly-->
     <script src="./assets/js/vendor/jquery.js"></script>
     <script src="./assets/js/vendor/jquery-ui-1.10.3.js"></script>
     <script src="./assets/js/vendor/json2.js"></script>
@@ -34,11 +34,14 @@
     <script src="./assets/js/views/TaskView.js"></script>
     <script src="./assets/js/app.js"></script>
     
-    <!-- Template -->
+    <!-- Task Template -->
     <script type="text/template" id="task-template">
       <div class="view">
-        <input class="toggle" type="checkbox">
-        <label><%- title %></label>
+        <input class="toggle" type="checkbox" <%= completed ? 'checked: checked' : '' %> />
+        <label>
+          <b><%- title %></b>
+        </label>
+        <span class="icon-remove-sign"></span>
       </div>
     </script>
 

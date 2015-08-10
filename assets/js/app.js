@@ -1,11 +1,6 @@
 var Geneva = new Marionette.Application();
 var Tasks;
 
-Geneva.addRegions({
-  mainRegion: "#main-region",
-  listRegion:'#list-view'
-});
-
 Geneva.on("start", function() {
   Backbone.history.start();
   Tasks = new TasksList;
@@ -26,16 +21,14 @@ Geneva.AppView = Backbone.View.extend({
   initialize: function () {
     this.input = this.$("#new-task");
     this.allCheckbox = this.$("#toggle-all")[0];
-    console.log("tasks: " + Tasks.toJSON());
     this.listenTo(Tasks, 'add', this.addOne);
     this.main = $('#main');
 
     Tasks.fetch();
-    console.log("tasks: " + Tasks.toJSON());
   },
 
   render: function () {
-    console.log("rendering appview");
+    
   },
 
   addOne: function (task) {

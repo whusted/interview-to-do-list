@@ -6,6 +6,10 @@ var TaskView = Backbone.View.extend({
     this.listenTo(this.model, 'change', this.render);
   },
 
+  events: {
+    "click .toggle"   : "toggleDone"
+  },
+
   render: function () {
     this.$el.toggleClass('completed', this.model.get('completed'));
     this.$el.html(this.template(this.model.toJSON()));
