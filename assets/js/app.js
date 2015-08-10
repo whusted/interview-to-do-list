@@ -39,9 +39,11 @@ Geneva.AppView = Backbone.View.extend({
   createTaskOnEnter: function(e) {
     // Only respond to enter keypress
     if (e.keyCode != 13) return;
-
-    Tasks.create({title: this.input.val()});
-      this.input.val('');
+    // Disallow creating empty tasks
+    if (this.input.val()) {
+      Tasks.create({title: this.input.val()});
+        this.input.val('');
+      }
     }
 
 });
