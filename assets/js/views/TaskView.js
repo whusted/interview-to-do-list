@@ -3,11 +3,13 @@ var TaskView = Backbone.View.extend({
 
   initialize: function () {
     this.template = _.template($("#task-template").html());
+    this.listenTo(this.model, 'change', this.render);
   },
 
   render: function () {
+    this.$el.toggleClass('completed', this.model.get('completed'));
     this.$el.html(this.template(this.model.toJSON()));
-      return this;
+    return this;
   },
 
   toggleDone: function () {
