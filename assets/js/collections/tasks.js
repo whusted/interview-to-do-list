@@ -4,5 +4,3 @@ var TasksList = Backbone.Collection.extend({
   model: Task,
   localStorage: new Store("backbone-todo")
 });
-
-var TasksList = new TasksList();

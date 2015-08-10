@@ -9,19 +9,13 @@
   </head>
 
   <body>
-    <div class='container'>
+    <div id="task-app">
       <h1>Get Stuff Done</h1>
-      <section class='todo'>
+      <input id="new-task" placeholder="What needs to be done?">
+      <section id="main" style="display: none;">
         <ul id="todo-list"></ul>
       </section>
     </div>
-
-    <script type="text/template" id="task-template">
-      <div class="view">
-        <input class="toggle" type="checkbox">
-        <label><%- title %></label>
-      </div>
-    </script>
 
 
     <script src="./assets/js/vendor/jquery.js"></script>
@@ -37,9 +31,17 @@
     <script src="./assets/js/vendor/spin.jquery.js"></script>
     <script src="./assets/js/models/task.js"></script>
     <script src="./assets/js/collections/tasks.js"></script>
-    <script src="./assets/js/views/tasksView.js"></script>
-
+    <script src="./assets/js/views/TaskView.js"></script>
     <script src="./assets/js/app.js"></script>
+    
+    <!-- Template -->
+    <script type="text/template" id="task-template">
+      <div class="view">
+        <input class="toggle" type="checkbox">
+        <label><%- title %></label>
+      </div>
+    </script>
+
     <script type="text/javascript">
       Geneva.start();
     </script>
