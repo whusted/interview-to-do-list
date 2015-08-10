@@ -1,3 +1,20 @@
 body {
   padding-top: 60px; /* 60px to make the container make room for the navigation bar */
 }
+
+/* Remove bullets */
+ul {
+  list-style: none;
+}
+
+li {
+  max-width: 400px;
+}
+
+.cancel_button {
+  float: right;
+}
+
+label:hover { 
+  text-decoration: underline 
+}
