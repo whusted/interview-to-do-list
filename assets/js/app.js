@@ -5,8 +5,6 @@ Geneva.on("start", function() {
   Backbone.history.start();
   Tasks = new TasksList;
   var appView = new Geneva.AppView;
-  console.log(JSON.stringify(Tasks));
-  Tasks.remove("title", "");
 });
 
 
