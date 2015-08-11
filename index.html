@@ -11,7 +11,7 @@
   <body>
     <div id="task-app" class="container" style="text-align: center">
       <h1>Get Stuff Done</h1>
-      <input id="new-task" placeholder="What needs to be done?">
+      <input id="new-task" class="input-box" placeholder="What needs to be done?">
       <section id="main">
         <ul id="task-list"></ul>
       </section>
@@ -40,13 +40,10 @@
         <label>
           <div class="checkbox">
             <input type="checkbox" <%= completed ? 'checked: checked' : '' %> />
-              <label for="checkboxFiveInput"></label>
-            <b><%- title %></b>
+              <label for="checkboxes"></label>
+            <div class ="title"><%- title %></div>
           </div>
         </label>
-        <div class="cancel_button"> 
-          <span class="icon-remove-sign"></span>
-        </div>
       </div>
     </script>
 

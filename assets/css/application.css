@@ -1,5 +1,5 @@
 body {
-  padding-top: 60px; /* 60px to make the container make room for the navigation bar */
+  background-color: #AAAAAA;
 }
 
 .cancel_button {
@@ -7,8 +7,6 @@ body {
 }
 
 .checkbox {
-  width: 25px;
-  margin: 20px 100px;
   position: relative;
 }
 
@@ -51,6 +49,23 @@ body {
   opacity: 1;
 }
 
+.container {
+  border-radius: 15px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 4px 2px #EEE;
+  -moz-box-shadow: 0 0 4px 2px #EEE;
+  box-shadow: 0 0 4px 2px #EEE;
+}
+
+h1 {
+  padding: 10px;
+}
+
+.input-box {
+  width: 60%;
+  height: 35px;
+  font-size: 20px;
+}
 
 #task-app {
   max-width: 400px;
@@ -61,12 +76,20 @@ body {
   margin: auto;
 }
 
+.title {
+  font-size: 16px;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
 /* Remove bullets */
 ul {
   list-style: none;
 }
 
 .view {
+  border-bottom: 1px solid;
   width: 80%; 
-  margin:auto
+  margin: auto;
+  margin-top: 15px;
 }
