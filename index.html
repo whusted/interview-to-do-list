@@ -37,14 +37,16 @@
     <!-- Task Template -->
     <script type="text/template" id="task-template">
       <div class="view">
-        <input class="toggle" type="checkbox" <%= completed ? 'checked: checked' : '' %> />
         <label>
-          <b><%- title %></b>
-          <div class="cancel_button"> 
-            <span class="icon-remove-sign"></span>
+          <div class="checkbox">
+            <input type="checkbox" <%= completed ? 'checked: checked' : '' %> />
+              <label for="checkboxFiveInput"></label>
+            <b><%- title %></b>
           </div>
         </label>
-        
+        <div class="cancel_button"> 
+          <span class="icon-remove-sign"></span>
+        </div>
       </div>
     </script>
 

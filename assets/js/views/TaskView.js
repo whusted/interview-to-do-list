@@ -7,7 +7,7 @@ var TaskView = Backbone.View.extend({
   },
 
   events: {
-    "click .toggle"   : "toggleDone"
+    "click .checkbox"   : "toggleDone"
   },
 
   render: function () {
