@@ -8,6 +8,7 @@ body {
 
 .checkbox {
   position: relative;
+  float: left;
 }
 
 .checkbox label:after {
@@ -36,7 +37,7 @@ body {
   width: 25px;
   height: 25px;
   top: 0;
-    left: 0;
+  left: 0;
   background: #eee;
   border:1px solid #ddd;
 }
