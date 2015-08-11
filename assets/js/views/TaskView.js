@@ -4,6 +4,7 @@ var TaskView = Backbone.View.extend({
   initialize: function () {
     this.template = _.template($("#task-template").html());
     this.listenTo(this.model, 'change', this.render);
+    this.listenTo(this.model, 'destroy', this.remove);
   },
 
   events: {
@@ -18,5 +19,6 @@ var TaskView = Backbone.View.extend({
 
   toggleDone: function () {
       this.model.toggle();
+      this.model.destroy();
     }
 });

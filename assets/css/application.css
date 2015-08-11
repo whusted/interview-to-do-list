@@ -73,6 +73,7 @@ h1 {
 }
 
 #task-list {
+  padding-top: 12px;
   max-width: 400px;
   margin: auto;
 }
@@ -99,4 +100,5 @@ li {
 /* Remove last border line */
 li:last-child {
   border-bottom: none;
+  padding-bottom: 16px;
 }
