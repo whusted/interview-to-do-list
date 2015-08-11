@@ -2,13 +2,11 @@ body {
   background-color: #AAAAAA;
 }
 
-.cancel_button {
-  float: right;
-}
-
 .checkbox {
   position: relative;
+  width: 27px;
   float: left;
+  margin-top: -10px;
 }
 
 .checkbox label:after {
@@ -46,8 +44,15 @@ body {
   opacity: 0.5;
 }
 
+/* Will be relevant when completed tasks are shown*/
+
 .checkbox input[type=checkbox]:checked + label:after {
   opacity: 1;
+}
+
+.clock {
+  float: left;
+  width: 20px;
 }
 
 .container {
@@ -85,8 +90,9 @@ h1 {
 
 .title {
   font-size: 24px;
-  padding-top: 5px;
-  margin: auto;
+  width: 70%;
+  float: left;
+  position: relative;
 }
 
 /* Remove bullets */
@@ -98,12 +104,12 @@ li {
   border-bottom: 1px solid;
   width: 80%; 
   margin: auto;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 36px;
 }
 
 /* Remove last border line */
 li:last-child {
   border-bottom: none;
-  padding-bottom: 28px;
+  padding-bottom: 40px;
 }

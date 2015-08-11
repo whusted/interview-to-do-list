@@ -37,13 +37,16 @@
     <!-- Task Template -->
     <script type="text/template" id="task-template">
       <div class="view">
-          <div class="checkbox">
-            <input type="checkbox" <%= completed ? 'checked: checked' : '' %> />
-              <label for="checkboxes"></label>
-          </div>
+        <div class="checkbox">
+          <input type="checkbox" <%= completed ? 'checked: checked' : '' %> />
+            <label for="checkboxes"></label>
+        </div>
         <div class ="title">
           <%- title %>
         </div>
+          <div class="clock">
+            <span class="icon-time"></span>
+          </div>
       </div>
     </script>
 
