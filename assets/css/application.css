@@ -5,8 +5,6 @@ body {
 .checkbox {
   position: relative;
   float: left;
-  width: 27px;
-  height: 27px;
 }
 
 .checkbox label:after {
@@ -70,6 +68,14 @@ body {
 
 .datepickers {
   float: left;
+}
+
+.editing {
+  
+}
+
+.editTask {
+  display: none !important;
 }
 
 h1 {
