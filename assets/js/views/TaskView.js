@@ -9,7 +9,7 @@ var TaskView = Backbone.View.extend({
 
   events: {
     "click .checkbox"   : "toggleDone",
-    "change .datepickers" : "dateSelected"
+    "onSelect .datepickers" : "dateSelected"
   },
 
   render: function () {
