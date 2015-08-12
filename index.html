@@ -47,11 +47,17 @@
           <div class="clock">
             <span class="icon-time"></span>
           </div>
+          <div class="datepickers">
+            <input placeholder="Add due date" type="text" <%= dueDate ? 'value=' + dueDate  : '' %> class="datepicker">
+          </div>
       </div>
     </script>
 
     <script type="text/javascript">
       Geneva.start();
+      $(function() {
+        $(".datepicker").datepicker();
+      });
     </script>
   </body>
 </html>

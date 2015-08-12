@@ -8,7 +8,8 @@ var TaskView = Backbone.View.extend({
   },
 
   events: {
-    "click .checkbox"   : "toggleDone"
+    "click .checkbox"   : "toggleDone",
+    "change .datepickers" : "dateSelected"
   },
 
   render: function () {
@@ -18,7 +19,11 @@ var TaskView = Backbone.View.extend({
   },
 
   toggleDone: function () {
-      this.model.toggle();
-      this.model.destroy();
-    }
+    this.model.toggle();
+    this.model.destroy();
+  },
+
+  dateSelected: function(e) {
+    this.model.setDueDate($(e.target).datepicker('getDate'));
+  }
 });

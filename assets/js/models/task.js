@@ -4,7 +4,11 @@ var Task = Backbone.Model.extend({
   defaults: {
     title: null,
     completed: false,
-    date: null
+    dueDate: null
+  },
+
+  setDueDate: function (dueDate) {
+    this.save({dueDate: dueDate});
   },
 
   toggle: function () {
@@ -14,7 +18,7 @@ var Task = Backbone.Model.extend({
   },
 
   initialize: function () {
-    this.set('date', Date());
+    
   }
 
 });

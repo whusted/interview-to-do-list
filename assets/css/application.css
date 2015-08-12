@@ -3,7 +3,7 @@ body {
 }
 
 .checkbox {
-  position: relative;
+  position: absolute;
   width: 27px;
   float: left;
   margin-top: -10px;
@@ -63,6 +63,11 @@ body {
   box-shadow: 0 0 4px 2px #EEE;
 }
 
+.datepicker {
+  width: 80px;
+  float: left;
+}
+
 h1 {
   padding: 10px;
 }
@@ -72,32 +77,6 @@ h1 {
   height: 40px;
   font-size: 24px;
   line-height: normal;
-}
-
-#main {
-  padding-top: 10px;
-}
-
-#task-app {
-  max-width: 450px;
-}
-
-#task-list {
-  padding-top: 12px;
-  max-width: 450px;
-  margin: auto;
-}
-
-.title {
-  font-size: 24px;
-  width: 70%;
-  float: left;
-  position: relative;
-}
-
-/* Remove bullets */
-ul {
-  list-style: none;
 }
 
 li {
@@ -112,4 +91,34 @@ li {
 li:last-child {
   border-bottom: none;
   padding-bottom: 40px;
+}
+
+#main {
+  padding-top: 10px;
+}
+
+span.icon-time {
+  font-size: 20px;
+}
+
+#task-app {
+  max-width: 500px;
+}
+
+#task-list {
+  padding-top: 12px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.title {
+  font-size: 24px;
+  width: 70%;
+  float: left;
+  position: relative;
+}
+
+/* Remove bullets */
+ul {
+  list-style: none;
 }
