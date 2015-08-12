@@ -10,12 +10,14 @@ var TaskView = Backbone.View.extend({
   events: {
     "click .checkbox"   : "toggleDone",
     "change .datepickers" : "dateSelected",
-    "dblclick .view"  : "edit"
+    "dblclick .view"  : "edit",
+    "keypress .editTask" : "updateTask"
   },
 
   render: function () {
     this.$el.toggleClass('completed', this.model.get('completed'));
     this.$el.html(this.template(this.model.toJSON()));
+    this.inputBox = this.$('.editTask');
     // Need to apply datepicker each time a new task is created
     $(".datepicker").datepicker();
     return this;
@@ -29,11 +31,23 @@ var TaskView = Backbone.View.extend({
 
   edit: function () {
     this.$el.addClass("editing");
-    console.log(this.input);
+    this.inputBox.show();
+    this.inputBox.focus();
   },
 
   toggleDone: function () {
+    // Toggle not needed until completed tasks are saved
     this.model.toggle();
     this.model.destroy();
+  },
+
+  updateTask: function (e) {
+    if (e.keyCode != 13) return;
+    // Disallow changing tasks to empty tasks
+    if (this.inputBox.val()) {
+      var newTitle = this.inputBox.val();
+      this.model.editTitle(newTitle);
+    }
   }
+ 
 });

@@ -17,6 +17,10 @@ var Task = Backbone.Model.extend({
     this.save({completed: !this.get("completed")});
   },
 
+  editTitle: function (newTitle) {
+    this.save({title: newTitle});
+  },
+
   initialize: function () {
     
   }
