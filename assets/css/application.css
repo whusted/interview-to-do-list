@@ -7,7 +7,6 @@ body {
   float: left;
   width: 27px;
   height: 27px;
-  margin-top: -10px;
 }
 
 .checkbox label:after {

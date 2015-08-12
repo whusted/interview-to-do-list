@@ -26,6 +26,8 @@ var TaskView = Backbone.View.extend({
   },
 
   dateSelected: function(e) {
-    this.model.setDueDate($(e.target).datepicker('getDate'));
+    var date = $(e.target).datepicker('getDate');
+    var formattedDate = $.datepicker.formatDate("mm-dd-yy", date);
+    this.model.setDueDate(formattedDate);
   }
 });
