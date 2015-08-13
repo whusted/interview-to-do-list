@@ -38,7 +38,7 @@
     <script type="text/template" id="task-template">
       <div class="view">
         <div class="checkbox">
-          <input type="checkbox" <%= completed ? 'checked: checked' : '' %> />
+          <input type="checkbox" <%= completed ? "checked: checked" : "" %> />
             <label for="checkboxes"></label>
         </div>
         <div class ="title">
@@ -48,10 +48,10 @@
             <span class="icon-time"></span>
           </div>
           <div class="datepickers">
-            <input placeholder="Add due date" type="text" <%= dueDate ? 'value=' + dueDate  : '' %> class="datepicker"/>
+            <input placeholder="Add due date" type="text" <%= dueDate ? "value=" + dueDate  : "" %> class="datepicker"/>
           </div>
+          <input class="editTask" type="text" value= "<%- title %>" >
       </div>
-      <input class="editTask" type="text" value= <%- title %> >
     </script>
 
     <script type="text/javascript">

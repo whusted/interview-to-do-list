@@ -21,8 +21,8 @@ Geneva.AppView = Backbone.View.extend({
   initialize: function () {
     this.input = this.$("#new-task");
     this.allCheckbox = this.$("#toggle-all")[0];
-    this.listenTo(Tasks, 'add', this.addOne);
-    this.main = $('#main');
+    this.listenTo(Tasks, "add", this.addOne);
+    this.main = $("#main");
 
     Tasks.fetch();
   },
@@ -42,7 +42,7 @@ Geneva.AppView = Backbone.View.extend({
     // Disallow creating empty tasks
     if (this.input.val()) {
       Tasks.create({title: this.input.val()});
-        this.input.val('');
+        this.input.val("");
       }
     }
 
