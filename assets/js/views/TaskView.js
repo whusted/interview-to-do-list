@@ -12,13 +12,15 @@ var TaskView = Backbone.View.extend({
     "click .checkbox"   : "toggleDone",
     "change .datepickers" : "dateSelected",
     "dblclick .view"  : "edit",
-    "keypress .editTask" : "updateTask"
+    "keypress .editTask" : "updateOnEnter",
+    "blur .editTask" : "updateAndClose"
   },
 
   render: function () {
     this.$el.toggleClass("completed", this.model.get("completed"));
     this.$el.html(this.template(this.model.toJSON()));
     this.inputBox = this.$(".editTask");
+    this.title = this.$(".title");
     // Need to apply datepicker each time a new task is created
     $(".datepicker").datepicker();
     return this;
@@ -31,8 +33,8 @@ var TaskView = Backbone.View.extend({
   },
 
   edit: function () {
-    this.$el.addClass("editing");
-    this.inputBox.show();
+    this.title.addClass("editing");
+    this.inputBox.attr("style", "display: block !important");
     this.inputBox.focus();
   },
 
@@ -42,13 +44,17 @@ var TaskView = Backbone.View.extend({
     this.model.destroy();
   },
 
-  updateTask: function (e) {
-    if (e.keyCode != 13) return;
+  updateAndClose: function () {
     // Disallow changing tasks to empty tasks
     if (this.inputBox.val()) {
       var newTitle = this.inputBox.val();
       this.model.editTitle(newTitle);
+      this.title.removeClass("editing");
     }
+  },
+
+  updateOnEnter: function (e) {
+    if (e.keyCode === 13) this.updateAndClose();
   }
  
 });

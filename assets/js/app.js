@@ -23,7 +23,7 @@ Geneva.AppView = Backbone.View.extend({
     this.allCheckbox = this.$("#toggle-all")[0];
     this.listenTo(Tasks, "add", this.addOne);
     this.main = $("#main");
-
+    
     Tasks.fetch();
   },
 

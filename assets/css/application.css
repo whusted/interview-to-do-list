@@ -1,5 +1,5 @@
 body {
-  background-color: #AAAAAA;
+  background-color: #DDDDDD;
 }
 
 .checkbox {
@@ -71,11 +71,14 @@ body {
 }
 
 .editing {
-  
+  display: none;
 }
 
 .editTask {
-  display: none;
+  display: none !important;
+  width: 80%;
+  position: absolute;
+  width: 180px;
 }
 
 h1 {
