@@ -11,7 +11,7 @@ var TaskView = Backbone.View.extend({
   events: {
     "click .checkbox"   : "toggleDone",
     "change .datepickers" : "dateSelected",
-    "dblclick .view"  : "edit",
+    "dblclick .title"  : "edit",
     "keypress .editTask" : "updateOnEnter",
     "blur .editTask" : "updateAndClose"
   },
@@ -49,6 +49,7 @@ var TaskView = Backbone.View.extend({
     if (this.inputBox.val()) {
       var newTitle = this.inputBox.val();
       this.model.editTitle(newTitle);
+      this.inputBox.attr("style", "display: none !important");
       this.title.removeClass("editing");
     }
   },
