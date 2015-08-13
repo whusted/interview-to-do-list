@@ -22,13 +22,18 @@ Geneva.AppView = Backbone.View.extend({
     this.input = this.$("#new-task");
     this.allCheckbox = this.$("#toggle-all")[0];
     this.listenTo(Tasks, "add", this.addOne);
-    this.main = $("#main");
-    
+    this.listenTo(Tasks, "all", this.render);
+
     Tasks.fetch();
   },
 
   render: function () {
-    
+    console.log(!Tasks.length);
+    if (!Tasks.length) {
+      $("#edit_instructions").addClass("hidden");
+    } else {
+      $("#edit_instructions").removeClass("hidden");
+    }
   },
 
   addOne: function (task) {

@@ -1,5 +1,6 @@
 body {
   background-color: #DDDDDD;
+  text-align: center;
 }
 
 .checkbox {
@@ -70,8 +71,10 @@ body {
   float: left;
 }
 
-.editing {
-  display: none;
+#edit_instructions {
+  margin: auto;
+  padding-top: 15px;
+  color: #777777;
 }
 
 .editTask {
@@ -83,6 +86,10 @@ body {
 
 h1 {
   padding: 12px;
+}
+
+.hidden {
+  display: none;
 }
 
 .input-box {
@@ -104,6 +111,7 @@ li {
 li:last-child {
   border-bottom: none;
   padding-bottom: 50px;
+  display: inline-block;
 }
 
 #main {
@@ -115,18 +123,19 @@ span.icon-time {
 }
 
 #task-app {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 #task-list {
   padding-top: 12px;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 
 .title {
+  /*word-break: break-word;*/
   font-size: 24px;
-  width: 60%;
+  width: 70%;
   float: left;
   position: relative;
 }

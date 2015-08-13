@@ -33,7 +33,7 @@ var TaskView = Backbone.View.extend({
   },
 
   edit: function () {
-    this.title.addClass("editing");
+    this.title.addClass("hidden");
     this.inputBox.attr("style", "display: block !important");
     this.inputBox.focus();
   },
@@ -50,7 +50,7 @@ var TaskView = Backbone.View.extend({
       var newTitle = this.inputBox.val();
       this.model.editTitle(newTitle);
       this.inputBox.attr("style", "display: none !important");
-      this.title.removeClass("editing");
+      this.title.removeClass("hidden");
     }
   },
 
